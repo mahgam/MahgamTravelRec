@@ -1,5 +1,7 @@
 const clearButton = document.getElementById("clearButton");
 const searchButton = document.getElementById("searchButton");
+const recResult = document.getElementById("recResult");
+const searchInput = document.getElementById("searchInput");
 
 clearButton.addEventListener("click", clearSearch);
 searchButton.addEventListener("click", generateSearchResult);
@@ -9,10 +11,7 @@ function clearSearch() {
 }
 
 function generateSearchResult() {
-  const recResult = document.getElementById("recResult");
-  const searchInput = document.getElementById("searchInput");
   let searchObjL = searchInput.value.toLowerCase();
-  recResult.innerHTML = "";
 
   let searchObjLt;
 
@@ -33,23 +32,23 @@ function generateSearchResult() {
       if (searchObjLt == "beach") {
         recResult.innerHTML += `<h2>Name: ${data.beaches[0].name}</h2><br>`;
         recResult.innerHTML += `<p>Description: ${data.beaches[0].description}</p><br><br>`;
-        recResult.innerHTML += `<img src="${data.beaches[0].imageUrl}" alt="hjh">`;
+        recResult.innerHTML += `<img width="400px" src="${data.beaches[0].imageUrl}" alt="hjh">`;
 
         recResult.innerHTML += `<h2>Name: ${data.beaches[1].name}</h2><br>`;
         recResult.innerHTML += `<p>Description: ${data.beaches[1].description}</p><br><br>`;
-        recResult.innerHTML += `<img src="${data.beaches[1].imageUrl}" alt="hjh">`;
+        recResult.innerHTML += `<img width="400px" src="${data.beaches[1].imageUrl}" alt="hjh">`;
       } else if (searchObjLt == "temple") {
         recResult.innerHTML += `<h2>Name: ${data.temples[0].name}</h2><br>`;
         recResult.innerHTML += `<p>Description: ${data.temples[0].description}</p><br><br>`;
-        recResult.innerHTML += `<img src="${data.temples[0].imageUrl}" alt="hjh">`;
+        recResult.innerHTML += `<img width="400px" src="${data.temples[0].imageUrl}" alt="hjh">`;
 
         recResult.innerHTML += `<h2>Name: ${data.temples[1].name}</h2><br>`;
         recResult.innerHTML += `<p>Description: ${data.temples[1].description}</p><br><br>`;
-        recResult.innerHTML += `<img src="${data.temples[1].imageUrl}" alt="hjh">`;
+        recResult.innerHTML += `<img width="400px" src="${data.temples[1].imageUrl}" alt="hjh">`;
       } else if (searchObjLt == "country") {
         recResult.innerHTML += `<h2>Name: ${data.countries[1].cities[0].name}</h2><br>`;
         recResult.innerHTML += `<p>Description: ${data.countries[1].cities[0].description}</p><br><br><br>`;
-        recResult.innerHTML += `<img src="${data.countries[1].cities[0].imageUrl}" alt="hjh">`;
+        recResult.innerHTML += `<img width="400px" src="${data.countries[1].cities[0].imageUrl}" alt="hjh">`;
 
         recResult.innerHTML += `<h2>Name: ${data.countries[2].cities[1].name}</h2><br>`;
         recResult.innerHTML += `<p>Description: ${data.countries[2].cities[1].description}</p><br><br><br>`;
